@@ -1,0 +1,630 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\CNPY\lib\cnpy.lib" />
+    <Library Include="..\..\..\libtorchLib\asmjit.lib" />
+    <Library Include="..\..\..\libtorchLib\c10.lib" />
+    <Library Include="..\..\..\libtorchLib\c10_cuda.lib" />
+    <Library Include="..\..\..\libtorchLib\caffe2_nvrtc.lib" />
+    <Library Include="..\..\..\libtorchLib\cpuinfo.lib" />
+    <Library Include="..\..\..\libtorchLib\dnnl.lib" />
+    <Library Include="..\..\..\libtorchLib\fbgemm.lib" />
+    <Library Include="..\..\..\libtorchLib\fbjni.lib" />
+    <Library Include="..\..\..\libtorchLib\fmt.lib" />
+    <Library Include="..\..\..\libtorchLib\fmtd.lib" />
+    <Library Include="..\..\..\libtorchLib\kineto.lib" />
+    <Library Include="..\..\..\libtorchLib\libprotobuf-lite.lib" />
+    <Library Include="..\..\..\libtorchLib\libprotobuf-lited.lib" />
+    <Library Include="..\..\..\libtorchLib\libprotobuf.lib" />
+    <Library Include="..\..\..\libtorchLib\libprotoc.lib" />
+    <Library Include="..\..\..\libtorchLib\libprotocd.lib" />
+    <Library Include="..\..\..\libtorchLib\pthreadpool.lib" />
+    <Library Include="..\..\..\libtorchLib\pytorch_jni.lib" />
+    <Library Include="..\..\..\libtorchLib\sleef.lib" />
+    <Library Include="..\..\..\libtorchLib\torch.lib" />
+    <Library Include="..\..\..\libtorchLib\torch_cpu.lib" />
+    <Library Include="..\..\..\libtorchLib\torch_cuda.lib" />
+    <Library Include="..\..\..\libtorchLib\XNNPACK.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_atomic-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_chrono-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_container-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_context-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_contract-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_coroutine-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_date_time-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_exception-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_fiber-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_graph-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_graph_parallel-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_json-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_locale-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_log-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_log_setup-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_math_c99-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_math_c99f-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_math_c99l-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_math_tr1-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_math_tr1f-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_math_tr1l-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_mpi-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_nowide-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_numpy310-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_prg_exec_monitor-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_program_options-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_python310-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_random-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_regex-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_serialization-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_stacktrace_noop-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_stacktrace_windbg-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_stacktrace_windbg_cached-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_system-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_test_exec_monitor-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_thread-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_timer-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_type_erasure-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_unit_test_framework-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_url-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_wave-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_wserialization-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Boost\lib\libboost_zlib-vc143-mt-gd-x64-1_84.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\FLANN\lib\flann-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\FLANN\lib\flann_cpp-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\FLANN\lib\flann_cpp_s-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\FLANN\lib\flann_s-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\OpenNI2\Lib\OpenNI2.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhullcpp.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhullcpp_d.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhullstatic.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhullstatic_d.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhullstatic_r.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhullstatic_rd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhull_r.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\Qhull\lib\qhull_rd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkcgns-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkChartsCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonColor-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonDataModel-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonExecutionModel-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonMath-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonMisc-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonSystem-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonTransforms-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkCommonTransforms-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkDICOMParser-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkDomainsChemistry-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkDomainsChemistryOpenGL2-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkdoubleconversion-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkdoubleconversion-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkexodusII-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkexodusII-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkexpat-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkexpat-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersAMR-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersAMR-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersCellGrid-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersCellGrid-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersExtraction-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersExtraction-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersFlowPaths-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersFlowPaths-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeneral-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeneral-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeneric-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeneric-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeometry-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeometry-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeometryPreview-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersGeometryPreview-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersHybrid-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersHybrid-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersHyperTree-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersHyperTree-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersImaging-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersImaging-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersModeling-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersModeling-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersParallel-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersParallel-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersParallelImaging-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersParallelImaging-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersPoints-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersPoints-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersProgrammable-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersProgrammable-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersReduction-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersReduction-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersSelection-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersSelection-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersSMP-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersSMP-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersSources-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersSources-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersStatistics-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersStatistics-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersTensor-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersTensor-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersTexture-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersTexture-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersTopology-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersTopology-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersVerdict-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkFiltersVerdict-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkfmt-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkfmt-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkfreetype-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkfreetype-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkGeovisCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkGeovisCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkgl2ps-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkgl2ps-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkglew-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkglew-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkhdf5-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkhdf5-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkhdf5_hl-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkhdf5_hl-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingColor-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingColor-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingFourier-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingFourier-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingGeneral-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingGeneral-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingHybrid-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingHybrid-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingMath-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingMath-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingMorphological-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingMorphological-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingSources-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingSources-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingStatistics-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingStatistics-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingStencil-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkImagingStencil-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInfovisCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInfovisCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInfovisLayout-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInfovisLayout-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInteractionImage-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInteractionImage-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInteractionStyle-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInteractionStyle-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInteractionWidgets-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkInteractionWidgets-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOAMR-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOAMR-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOAsynchronous-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOAsynchronous-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCellGrid-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCellGrid-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCesium3DTiles-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCesium3DTiles-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCGNSReader-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCGNSReader-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOChemistry-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOChemistry-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCityGML-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCityGML-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCONVERGECFD-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCONVERGECFD-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOEnSight-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOEnSight-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExodus-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExodus-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExport-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExport-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExportGL2PS-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExportGL2PS-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExportPDF-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOExportPDF-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOFLUENTCFF-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOFLUENTCFF-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOGeometry-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOGeometry-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOHDF-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOHDF-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOImage-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOImage-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOImport-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOImport-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOInfovis-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOInfovis-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOIOSS-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOIOSS-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOLegacy-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOLegacy-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOLSDyna-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOLSDyna-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOMINC-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOMINC-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOMotionFX-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOMotionFX-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOMovie-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOMovie-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIONetCDF-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIONetCDF-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOOggTheora-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOOggTheora-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOParallel-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOParallel-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOParallelXML-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOParallelXML-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOPLY-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOPLY-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOSegY-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOSegY-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOSQL-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOSQL-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkioss-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkioss-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOTecplotTable-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOTecplotTable-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOVeraOut-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOVeraOut-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOVideo-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOVideo-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOXML-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOXML-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOXMLParser-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkIOXMLParser-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkjpeg-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkjpeg-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkjsoncpp-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkjsoncpp-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkkissfft-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkkissfft-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklibharu-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklibharu-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklibproj-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklibproj-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklibxml2-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklibxml2-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkloguru-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkloguru-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklz4-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklz4-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklzma-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtklzma-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkmetaio-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkmetaio-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtknetcdf-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtknetcdf-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkogg-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkogg-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkParallelCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkParallelCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkParallelDIY-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkParallelDIY-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkpng-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkpng-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkpugixml-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkpugixml-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingAnnotation-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingAnnotation-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingCellGrid-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingCellGrid-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingContext2D-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingContext2D-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingFreeType-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingFreeType-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingGL2PSOpenGL2-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingGL2PSOpenGL2-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingImage-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingImage-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingLabel-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingLabel-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingLICOpenGL2-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingLICOpenGL2-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingLOD-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingLOD-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingSceneGraph-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingSceneGraph-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingUI-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingUI-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingVolume-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingVolume-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingVolumeOpenGL2-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingVolumeOpenGL2-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingVtkJS-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkRenderingVtkJS-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtksqlite-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtksqlite-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtksys-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtksys-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkTestingRendering-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkTestingRendering-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtktheora-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtktheora-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtktiff-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtktiff-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkverdict-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkverdict-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkViewsContext2D-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkViewsContext2D-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkViewsCore-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkViewsCore-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkViewsInfovis-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkViewsInfovis-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkWrappingTools-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkWrappingTools-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkzlib-9.3-gd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\3rdParty\VTK\lib\vtkzlib-9.3.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_commond.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_featuresd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_filtersd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_iod.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_io_plyd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_kdtreed.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_keypointsd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_mld.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_octreed.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_outofcored.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_peopled.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_recognitiond.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_registrationd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_sample_consensusd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_searchd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_segmentationd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_stereod.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_surfaced.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_trackingd.lib" />
+    <Library Include="..\..\..\PCL 1.14.1\lib\pcl_visualizationd.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cublas.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cublasLt.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cuda.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudadevrt.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudart.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudart_static.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn64_8.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_adv_infer.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_adv_infer64_8.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_adv_train.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_adv_train64_8.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_cnn_infer.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_cnn_infer64_8.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_cnn_train.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_cnn_train64_8.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_ops_infer.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_ops_infer64_8.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_ops_train.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cudnn_ops_train64_8.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cufft.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cufftw.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cufilt.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\curand.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cusolver.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cusolverMg.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\cusparse.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppc.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppial.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppicc.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppidei.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppif.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppig.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppim.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppist.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppisu.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nppitc.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\npps.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvblas.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvfatbin.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvfatbin_static.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvJitLink.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvJitLink_static.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvjpeg.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvml.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvptxcompiler_static.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvrtc-builtins_static.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvrtc.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\nvrtc_static.lib" />
+    <Library Include="..\..\..\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64\OpenCL.lib" />
+    <Library Include="..\..\..\Users\86155\AppData\Local\Programs\Python\Python310\libs\python310_d.lib" />
+    <Library Include="..\..\..\Users\86155\Desktop\opencv\build\x64\vc16\lib\opencv_world4100d.lib" />
+    <Library Include="..\..\..\Users\86155\Desktop\pythonLib\libs\python310.lib" />
+    <Library Include="..\..\..\zlib\lib\zlibd.lib" />
+    <Library Include="..\..\..\zlib\lib\zlibstaticd.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\ext.cpp" />
+    <ClCompile Include="diff_gaussian_rasterization.cpp" />
+    <ClCompile Include="GaussianModel.cpp" />
+    <ClCompile Include="ParameterConfig.cpp" />
+    <ClCompile Include="renderer.cpp" />
+    <ClCompile Include="scene.cpp" />
+    <ClCompile Include="train.cpp" />
+    <ClCompile Include="util.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\cuda_rasterizer\backward.h" />
+    <ClInclude Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\cuda_rasterizer\forward.h" />
+    <ClInclude Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\cuda_rasterizer\rasterizer.h" />
+    <ClInclude Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\cuda_rasterizer\rasterizer_impl.h" />
+    <ClInclude Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\rasterize_points.h" />
+    <ClInclude Include="3rdParty\simple_knn\simple_knn.h" />
+    <ClInclude Include="3rdParty\simple_knn\spatial.h" />
+    <ClInclude Include="auxiliary.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="diff_gaussian_rasterization.h" />
+    <ClInclude Include="GaussianModel.h" />
+    <ClInclude Include="ParameterConfig.h" />
+    <ClInclude Include="renderer.h" />
+    <ClInclude Include="scene.h" />
+    <ClInclude Include="util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\cuda_rasterizer\backward.cu" />
+    <CudaCompile Include="..\..\..\Users\86155\Desktop\gaussian-splatting\submodules\diff-gaussian-rasterization\cuda_rasterizer\forward.cu" />
+    <CudaCompile Include="3rdParty\simple_knn\simple_knn.cu" />
+    <CudaCompile Include="3rdParty\simple_knn\spatial.cu" />
+    <CudaCompile Include="rasterizer_impl.cu" />
+    <CudaCompile Include="rasterize_points.cu" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{ded5db5a-b548-4092-8c8f-d147f6a40d03}</ProjectGuid>
+    <RootNamespace>My3dgs</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.4.props" />
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="PCL1.14_Release_x64.props.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\include;C:\libtorchInclude;C:\libtorchInclude\torch\csrc\api\include;C:\CNPY\include;C:\zlib\include;C:\Users\86155\Desktop\opencv\build\include;C:\Users\86155\Desktop\opencv\build\include\opencv2;C:\Users\86155\Desktop\gitProj\NumCpp\include;C:\Users\86155\Desktop\json-develop\include;C:\PCL 1.14.1\3rdParty\Eigen3\include\eigen3;C:\PCL 1.14.1\3rdParty\FLANN\include;C:\PCL 1.14.1\3rdParty\Qhull\include;C:\PCL 1.14.1\3rdParty\VTK\include\vtk-9.3;C:\PCL 1.14.1\include\pcl-1.14;C:\PCL 1.14.1\3rdParty\OpenNI2\Include;C:\PCL 1.14.1\3rdParty\Boost\include\boost-1_84;C:\Program Files (x86)\Eigen3;C:\Users\86155\Desktop\pythonLib\include;C:\glm;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.4\lib\x64;C:\libtorchLib;C:\CNPY\lib;C:\zlib\lib;C:\Users\86155\Desktop\opencv\build\x64\vc16\lib;C:\PCL 1.14.1\lib;C:\PCL 1.14.1\3rdParty\FLANN\lib;C:\PCL 1.14.1\3rdParty\Qhull\lib;C:\PCL 1.14.1\3rdParty\VTK\lib;C:\PCL 1.14.1\3rdParty\OpenNI2\Lib;C:\PCL 1.14.1\3rdParty\Boost\lib;C:\Users\86155\Desktop\pythonLib\libs;$(LibraryPath)</LibraryPath>
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\da\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;BOOST_USE_WINDOWS_H;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions</EnableEnhancedInstructionSet>
+      <MinimalRebuild>false</MinimalRebuild>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalOptions>/INCLUDE:?warp_size@cuda@at@@YAHXZ %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+    <CudaCompile />
+    <CudaCompile>
+      <AdditionalOptions>-std=c++17 -Xcompiler "/std:c++17" %(AdditionalOptions)</AdditionalOptions>
+    </CudaCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 12.4.targets" />
+  </ImportGroup>
+</Project>
